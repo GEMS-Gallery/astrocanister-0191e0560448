@@ -1,0 +1,17 @@
+type Mission = 
+ record {
+   description: text;
+   name: text;
+ };
+type Astronaut = 
+ record {
+   age: nat;
+   background: text;
+   name: text;
+   specialty: text;
+ };
+service : {
+  generateAstronaut: () -> ();
+  getAstronautProfile: () -> (opt Astronaut) query;
+  getMissionLog: () -> (vec Mission) query;
+}
